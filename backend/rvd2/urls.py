@@ -1,3 +1,6 @@
+from django.urls import path, include
+
+
 """rvd2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,4 +21,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/robots/', include ('robots.urls')),
+    path('api/dinosaurs/', include ('dinosaurs.urls')),
+    path('api/weapons/', include ('weapons.urls')),
 ]
